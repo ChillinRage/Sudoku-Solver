@@ -1,0 +1,49 @@
+td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 42px;
+    width: 42px;
+}
+
+td:first-child { /* first cell in each row (aka first column) */
+    border-left: 2px solid black;
+}
+
+td:nth-child(3n) { /* Every 3rd cell in each row (aka 3rd column)*/
+    border-right: 2px solid black;
+}
+
+tr:first-child td{ /* first row */
+    border-top: 2px solid black;
+}
+
+tr:nth-child(3n) td { /* Every 3rd row*/
+    border-bottom: 2px solid black;
+}
+
+.board {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.cell {
+    text-align: center;
+    height: 36px;
+    width: 36px;
+    font-size: 36px;
+    font-family: "Times New Roman", Arial;
+    border: none;
+}
+
+#buttons {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+}

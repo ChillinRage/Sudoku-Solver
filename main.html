@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with-device-width">
+    <title>Sudoku Solver</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Sudoku Solver</h1>
+    <p style="text-align: center; font-size: 24px;">
+        Enter the known numbers in each cell and click on the "Solve" button.
+    </p><br>
+
+    <table class="board">
+        <tr> <!------ ROW 1 ------->
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr> <!------ ROW 4 ------->
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr> <!------ ROW 7 ------->
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+            <td><input class="cell" type="text" maxlength="1" inputmode="numeric" onclick="this.select()" onkeypress="return validate(event)"></td>
+        </tr>
+    </table><br>
+
+    <div id="buttons">
+        <button id="solve" onclick="new Sudoku(readBoard()).solve()">Solve</button>
+        <button id="reset" onclick="clearBoard()">Clear</button>
+    </div>
+
+    <script src="Sudoku.js"></script>
+</body>
+
+</html>
